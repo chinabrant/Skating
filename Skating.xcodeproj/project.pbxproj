@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095716181AB6C6B40061F2C8 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095716171AB6C6B40061F2C8 /* SideMenuViewController.swift */; };
+		0957161A1AB6CAB00061F2C8 /* CircleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095716191AB6CAB00061F2C8 /* CircleModel.swift */; };
+		0957161D1AB6CC360061F2C8 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0957161C1AB6CC360061F2C8 /* DataList.swift */; };
+		0957161F1AB6CE290061F2C8 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0957161E1AB6CE290061F2C8 /* BaseModel.swift */; };
+		095716221AB6D7880061F2C8 /* CircleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095716201AB6D7880061F2C8 /* CircleListCell.swift */; };
+		095716231AB6D7880061F2C8 /* CircleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095716211AB6D7880061F2C8 /* CircleListCell.xib */; };
 		09E7B8FE1AA98892006E7442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7B8FD1AA98892006E7442 /* AppDelegate.swift */; };
 		09E7B9031AA98892006E7442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E7B9011AA98892006E7442 /* Main.storyboard */; };
 		09E7B9051AA98892006E7442 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E7B9041AA98892006E7442 /* Images.xcassets */; };
@@ -34,6 +40,12 @@
 
 /* Begin PBXFileReference section */
 		04573E389BDEBF93DB35F4C9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		095716171AB6C6B40061F2C8 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		095716191AB6CAB00061F2C8 /* CircleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleModel.swift; sourceTree = "<group>"; };
+		0957161C1AB6CC360061F2C8 /* DataList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
+		0957161E1AB6CE290061F2C8 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		095716201AB6D7880061F2C8 /* CircleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleListCell.swift; sourceTree = "<group>"; };
+		095716211AB6D7880061F2C8 /* CircleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleListCell.xib; sourceTree = "<group>"; };
 		09E7B8F81AA98892006E7442 /* Skating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7B8FC1AA98892006E7442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E7B8FD1AA98892006E7442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +86,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095716131AB6C0C50061F2C8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0957161B1AB6CC080061F2C8 /* Model */,
+				095716141AB6C0D90061F2C8 /* Libs */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		095716141AB6C0D90061F2C8 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				095716171AB6C6B40061F2C8 /* SideMenuViewController.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		0957161B1AB6CC080061F2C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0957161C1AB6CC360061F2C8 /* DataList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		09E7B8EF1AA98891006E7442 = {
 			isa = PBXGroup;
 			children = (
+				095716131AB6C0C50061F2C8 /* Core */,
 				09E7B8FA1AA98892006E7442 /* Skating */,
 				09E7B9101AA98892006E7442 /* SkatingTests */,
 				09E7B8F91AA98892006E7442 /* Products */,
@@ -167,6 +205,8 @@
 			children = (
 				09E7B92A1AA997E3006E7442 /* PostListCell.swift */,
 				09E7B92B1AA997E3006E7442 /* PostListCell.xib */,
+				095716201AB6D7880061F2C8 /* CircleListCell.swift */,
+				095716211AB6D7880061F2C8 /* CircleListCell.xib */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -175,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				09E7B92F1AA9A542006E7442 /* PostModel.swift */,
+				095716191AB6CAB00061F2C8 /* CircleModel.swift */,
+				0957161E1AB6CE290061F2C8 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +322,7 @@
 			files = (
 				09E7B9031AA98892006E7442 /* Main.storyboard in Resources */,
 				09E7B9081AA98892006E7442 /* LaunchScreen.xib in Resources */,
+				095716231AB6D7880061F2C8 /* CircleListCell.xib in Resources */,
 				09E7B9051AA98892006E7442 /* Images.xcassets in Resources */,
 				09E7B92D1AA997E3006E7442 /* PostListCell.xib in Resources */,
 			);
@@ -332,9 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095716181AB6C6B40061F2C8 /* SideMenuViewController.swift in Sources */,
 				09E7B9221AA99197006E7442 /* BaseViewController.swift in Sources */,
+				0957161F1AB6CE290061F2C8 /* BaseModel.swift in Sources */,
 				09E7B9271AA995C8006E7442 /* PostListViewController.swift in Sources */,
+				0957161A1AB6CAB00061F2C8 /* CircleModel.swift in Sources */,
+				095716221AB6D7880061F2C8 /* CircleListCell.swift in Sources */,
 				09E7B9201AA99143006E7442 /* MenuViewController.swift in Sources */,
+				0957161D1AB6CC360061F2C8 /* DataList.swift in Sources */,
 				09E7B9301AA9A542006E7442 /* PostModel.swift in Sources */,
 				09E7B92C1AA997E3006E7442 /* PostListCell.swift in Sources */,
 				09E7B8FE1AA98892006E7442 /* AppDelegate.swift in Sources */,

@@ -16,22 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         setupAVOS()
         
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        self.window!.backgroundColor = UIColor.whiteColor()
-        var circleList = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CircleListViewController") as CircleListViewController
-        var nav = UINavigationController(rootViewController: circleList)
-        var menu = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
-        var sideMenu = RESideMenu(contentViewController: nav, leftMenuViewController: menu, rightMenuViewController: nil)
-        sideMenu.menuPrefersStatusBarHidden = false
-        
-        self.window?.rootViewController = sideMenu
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        
+//        self.window!.backgroundColor = UIColor.whiteColor()
+//        var circleList = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CircleListViewController") as CircleListViewController
+//        var nav = UINavigationController(rootViewController: circleList)
+//        var menu = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
+//        var sideMenu = SideMenuViewController.sharedInstance
+//        sideMenu.setViewControllers(menu, center: nav)
+//        
+//        self.window?.rootViewController = sideMenu
         
         return true
     }
     
     func setupAVOS() {
         AVOSCloud.setApplicationId("tzpk1b0ugq2my4yspu01awep83yvsjplp3graz7u280flse8", clientKey: "attw7lf4rfv65ccud72k3x93cbuajydphtayiukayxg6f1ox")
+        
+        CircleModel.registerSubclass()
     }
 
     func applicationWillResignActive(application: UIApplication) {

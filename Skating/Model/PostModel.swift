@@ -8,6 +8,6 @@
 
 import UIKit
 
-class PostModel: AVObject, AVSubclassing {
+class PostModel: BaseModel, AVSubclassing {
    
 }

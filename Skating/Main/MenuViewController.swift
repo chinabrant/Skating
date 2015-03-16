@@ -15,6 +15,7 @@ class MenuViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "我的"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,14 +51,14 @@ class MenuViewController: UITableViewController {
             }
             
             var nav = UINavigationController(rootViewController: circleList!)
-            self.sideMenuViewController.contentViewController = nav
+            SideMenuViewController.sharedInstance.setCenterController(nav)
         } else if indexPath.row == 1 {
             if postList == nil {
                 postList = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PostListViewController") as? PostListViewController
             }
             
             var nav = UINavigationController(rootViewController: postList!)
-            self.sideMenuViewController.contentViewController = nav
+            SideMenuViewController.sharedInstance.setCenterController(nav)
         }
     }
 }

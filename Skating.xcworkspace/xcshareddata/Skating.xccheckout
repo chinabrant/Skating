@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>731FEB74-DE44-4D14-A9ED-128E8884BE66</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Skating</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>03DDCCE4199B3ED767A79C0F56521124F5D85C2C</key>
+		<string>https://github.com/chinabrant/Skating.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Skating.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>03DDCCE4199B3ED767A79C0F56521124F5D85C2C</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chinabrant/Skating.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>03DDCCE4199B3ED767A79C0F56521124F5D85C2C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>03DDCCE4199B3ED767A79C0F56521124F5D85C2C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Skating</string>
+		</dict>
+	</array>
+</dict>
+</plist>
