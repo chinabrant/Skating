@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         setupAVOS()
         
+        UINavigationBar.appearance().alpha = 1
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "nav_bg"), forBarMetrics: UIBarMetrics.Default)
+        
 //        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 //        
 //        self.window!.backgroundColor = UIColor.whiteColor()
@@ -33,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAVOS() {
         AVOSCloud.setApplicationId("tzpk1b0ugq2my4yspu01awep83yvsjplp3graz7u280flse8", clientKey: "attw7lf4rfv65ccud72k3x93cbuajydphtayiukayxg6f1ox")
         
+        UserModel.registerSubclass()
+        CommentModel.registerSubclass()
         PostModel.registerSubclass()
         CircleModel.registerSubclass()
     }

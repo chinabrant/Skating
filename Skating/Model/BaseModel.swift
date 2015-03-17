@@ -11,4 +11,10 @@ import Foundation
 class BaseModel: AVObject {
     var query: AVQuery?
     var pageSize: Int = 10
+    
+    func getFormatterTime() -> String {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormatter.stringFromDate(self.createdAt!)
+    }
 }

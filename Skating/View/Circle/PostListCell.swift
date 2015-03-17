@@ -10,13 +10,14 @@ import UIKit
 
 class PostListCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: AutoHeiLabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.titleLabel.preferredMaxLayoutWidth = self.titleLabel.frame.size.width
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -27,6 +28,8 @@ class PostListCell: UITableViewCell {
     
     func bindPost(post: PostModel) {
         self.titleLabel.text = post.title
+        self.timeLabel.text = post.getFormatterTime()
+        self.userLabel.text = post.user?.username
     }
     
 }

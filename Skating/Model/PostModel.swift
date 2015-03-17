@@ -13,8 +13,11 @@ class PostModel: BaseModel, AVSubclassing {
     var content: String?
     var circle: CircleModel?
     var image: AVFile?
+    var user: UserModel?
     
     class func parseClassName() -> String! {
         return "Post"
     }
+    
+    
 }

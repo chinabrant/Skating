@@ -40,6 +40,9 @@
 		09E7B92C1AA997E3006E7442 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7B92A1AA997E3006E7442 /* PostListCell.swift */; };
 		09E7B92D1AA997E3006E7442 /* PostListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E7B92B1AA997E3006E7442 /* PostListCell.xib */; };
 		09E7B9301AA9A542006E7442 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7B92F1AA9A542006E7442 /* PostModel.swift */; };
+		611FFC3C1AB84E62008F8B5B /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611FFC3B1AB84E62008F8B5B /* CommentModel.swift */; };
+		611FFC3E1AB8505E008F8B5B /* CommentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611FFC3D1AB8505E008F8B5B /* CommentAPI.swift */; };
+		611FFC401AB85397008F8B5B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611FFC3F1AB85397008F8B5B /* UserModel.swift */; };
 		E17CAB697AD45FEB9A421F75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCE9D7A4E86D3DF82929A78 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,9 @@
 		09E7B92F1AA9A542006E7442 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		0D10E7A9D3F64358392E269B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0FCE9D7A4E86D3DF82929A78 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		611FFC3B1AB84E62008F8B5B /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		611FFC3D1AB8505E008F8B5B /* CommentAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentAPI.swift; sourceTree = "<group>"; };
+		611FFC3F1AB85397008F8B5B /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 			children = (
 				090021541AB7D0A8000CFA53 /* PostAPI.swift */,
 				090021561AB7ECEE000CFA53 /* CircleAPI.swift */,
+				611FFC3D1AB8505E008F8B5B /* CommentAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -304,6 +311,8 @@
 				09E7B92F1AA9A542006E7442 /* PostModel.swift */,
 				095716191AB6CAB00061F2C8 /* CircleModel.swift */,
 				0957161E1AB6CE290061F2C8 /* BaseModel.swift */,
+				611FFC3B1AB84E62008F8B5B /* CommentModel.swift */,
+				611FFC3F1AB85397008F8B5B /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,6 +478,8 @@
 				09E7B9221AA99197006E7442 /* BaseViewController.swift in Sources */,
 				095E4B401AB80DFB00BF64BE /* AutoHeiLabel.swift in Sources */,
 				090021D91AB805D8000CFA53 /* CommentCell.swift in Sources */,
+				611FFC3E1AB8505E008F8B5B /* CommentAPI.swift in Sources */,
+				611FFC3C1AB84E62008F8B5B /* CommentModel.swift in Sources */,
 				090021551AB7D0A8000CFA53 /* PostAPI.swift in Sources */,
 				0957161F1AB6CE290061F2C8 /* BaseModel.swift in Sources */,
 				095E4B3F1AB80DFB00BF64BE /* AutoHeiImageView.swift in Sources */,
@@ -484,6 +495,7 @@
 				095E4B3A1AB80C7B00BF64BE /* PostDetailCell.swift in Sources */,
 				0900214C1AB7CD5B000CFA53 /* HTTPRequestSerializer.swift in Sources */,
 				090021571AB7ECEE000CFA53 /* CircleAPI.swift in Sources */,
+				611FFC401AB85397008F8B5B /* UserModel.swift in Sources */,
 				0900214E1AB7CD5B000CFA53 /* HTTPTask.swift in Sources */,
 				0900214F1AB7CD5B000CFA53 /* HTTPUpload.swift in Sources */,
 				09E7B9241AA991B2006E7442 /* CircleListViewController.swift in Sources */,

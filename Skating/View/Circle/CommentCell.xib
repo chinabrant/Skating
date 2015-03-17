@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -27,14 +27,14 @@
                         <color key="textColor" red="0.23921568630000001" green="0.74117647060000003" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPP-Ht-wBI">
-                        <rect key="frame" x="8" y="41" width="304" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPP-Ht-wBI" customClass="AutoHeiLabel" customModule="Skating" customModuleProvider="target">
+                        <rect key="frame" x="8" y="41" width="304" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.23137254900000001" green="0.27058823529999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-03-14 16:56" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-8r-xLe">
-                        <rect key="frame" x="8" y="69" width="116" height="17"/>
+                        <rect key="frame" x="8" y="65" width="116" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="pA4-X9-3RL"/>
                         </constraints>
@@ -57,7 +57,7 @@
                     <constraint firstItem="wiP-YE-hGs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="J4M-20-lUl"/>
                     <constraint firstAttribute="bottom" secondItem="Llz-cF-pIl" secondAttribute="bottom" id="M8P-XR-9c5"/>
                     <constraint firstItem="wiP-YE-hGs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="MIe-Gj-aPw"/>
-                    <constraint firstAttribute="bottom" secondItem="wdf-8r-xLe" secondAttribute="bottom" constant="1" id="MXX-Mx-d5m"/>
+                    <constraint firstAttribute="bottom" secondItem="wdf-8r-xLe" secondAttribute="bottom" constant="5" id="MXX-Mx-d5m"/>
                     <constraint firstItem="YN0-dE-JWB" firstAttribute="centerY" secondItem="wiP-YE-hGs" secondAttribute="centerY" id="S8U-nJ-BQ0"/>
                     <constraint firstItem="qPP-Ht-wBI" firstAttribute="top" secondItem="wiP-YE-hGs" secondAttribute="bottom" constant="8" id="TZc-gK-UaS"/>
                     <constraint firstItem="YN0-dE-JWB" firstAttribute="leading" secondItem="wiP-YE-hGs" secondAttribute="trailing" constant="8" id="dyZ-XE-scL"/>
@@ -65,6 +65,12 @@
                     <constraint firstItem="qPP-Ht-wBI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="yLU-5p-CIV"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="wiP-YE-hGs" id="u1o-48-20X"/>
+                <outlet property="contentLabel" destination="qPP-Ht-wBI" id="N19-21-ZtB"/>
+                <outlet property="timeLabel" destination="wdf-8r-xLe" id="XUb-xc-pSS"/>
+                <outlet property="usernameLabel" destination="YN0-dE-JWB" id="CPA-oC-flc"/>
+            </connections>
             <point key="canvasLocation" x="425" y="351"/>
         </tableViewCell>
     </objects>

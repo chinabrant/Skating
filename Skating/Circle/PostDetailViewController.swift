@@ -12,12 +12,27 @@ class PostDetailViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var postModel: PostModel?
+    var commentAPI: CommentAPI = CommentAPI()
+    var commentList = [CommentModel]()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerNib(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
         tableView.registerNib(UINib(nibName: "PostDetailCell", bundle: nil), forCellReuseIdentifier: "PostDetailCell")
+        
+        self.refreshData()
+    }
+    
+    func refreshData() {
+        commentAPI.queryCommentList { (objects, error) -> Void in
+            if error == nil {
+                self.commentList += objects as [CommentModel]
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                })
+            }
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,7 +40,7 @@ class PostDetailViewController: BaseViewController {
             return 1
         }
         
-        return 10
+        return self.commentList.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -45,7 +60,8 @@ class PostDetailViewController: BaseViewController {
         
         let Identifier = "CommentCell"
         var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as CommentCell
-
+        cell.bindComment(self.commentList[indexPath.row])
+        
         return cell
     }
     

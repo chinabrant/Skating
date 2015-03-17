@@ -47,11 +47,15 @@ class PostListViewController: BaseViewController {
         return postList.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        return cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let Identifier = "PostListCell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(Identifier, forIndexPath: indexPath) as PostListCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as PostListCell
         cell.bindPost(self.postList[indexPath.row])
         
         return cell
