@@ -12,7 +12,7 @@ class CircleListViewController: BaseViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var circleAPI = CircleAPI()
     var circleList = [CircleModel]()
     
     override func viewDidLoad() {
@@ -25,9 +25,11 @@ class CircleListViewController: BaseViewController {
     
     func refreshData() {
         println("读取圈子列表")
-        var query = AVQuery(className: "Circle")
-        query.limit = 10
-        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+        if self.circleAPI.requestState == RequestState.Requesting {
+            return
+        }
+        
+        self.circleAPI.queryCircleList { (objects, error) -> Void in
             if error == nil {
                 println(objects)
                 self.circleList += objects as [CircleModel]
@@ -53,5 +55,13 @@ class CircleListViewController: BaseViewController {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         return 64
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        var postList = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PostListViewController") as PostListViewController
+        postList.circle = self.circleList[indexPath.row] as CircleModel
+        postList.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(postList, animated: true)
     }
 }

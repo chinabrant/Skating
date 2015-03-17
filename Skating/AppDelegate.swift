@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAVOS() {
         AVOSCloud.setApplicationId("tzpk1b0ugq2my4yspu01awep83yvsjplp3graz7u280flse8", clientKey: "attw7lf4rfv65ccud72k3x93cbuajydphtayiukayxg6f1ox")
         
+        PostModel.registerSubclass()
         CircleModel.registerSubclass()
     }
 

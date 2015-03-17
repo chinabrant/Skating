@@ -9,5 +9,12 @@
 import UIKit
 
 class PostModel: BaseModel, AVSubclassing {
-   
+    var title: String?
+    var content: String?
+    var circle: CircleModel?
+    var image: AVFile?
+    
+    class func parseClassName() -> String! {
+        return "Post"
+    }
 }
