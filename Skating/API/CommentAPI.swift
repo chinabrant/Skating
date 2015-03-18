@@ -14,10 +14,11 @@ class CommentAPI: BaseAPI {
         self.query = AVQuery(className: "Comment")
     }
     
-    func queryCommentList(callback: AVArrayResultBlock) {
+    func queryCommentList(callback: AVArrayResultBlock, post: PostModel) {
         self.requestState = RequestState.Requesting
         self.query?.limit = self.pageSize
         self.query?.includeKey("user")
+        self.query?.whereKey("post", equalTo: post)
         self.query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             self.requestState = RequestState.None
             callback(objects, error)

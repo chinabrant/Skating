@@ -17,6 +17,7 @@ class CircleAPI: BaseAPI {
     func queryCircleList(callback: AVArrayResultBlock) {
         self.requestState = RequestState.Requesting
         self.query?.limit = self.pageSize
+        self.query?.orderByDescending("sort")
         self.query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             self.requestState = RequestState.None
             callback(objects, error)

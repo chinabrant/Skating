@@ -18,21 +18,34 @@ class PostDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var rightItem = UIBarButtonItem(title: "回复", style: UIBarButtonItemStyle.Bordered, target: self, action: "reply")
+        self.navigationItem.rightBarButtonItem = rightItem
+        
         tableView.registerNib(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
         tableView.registerNib(UINib(nibName: "PostDetailCell", bundle: nil), forCellReuseIdentifier: "PostDetailCell")
         
         self.refreshData()
     }
     
+    // MARK: 点击回复按钮
+    func reply() {
+        var addComment = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AddCommentViewController") as AddCommentViewController
+        var nav = UINavigationController(rootViewController: addComment)
+        addComment.post = self.postModel
+        self.presentViewController(nav, animated: true) { () -> Void in
+            
+        }
+    }
+    
     func refreshData() {
-        commentAPI.queryCommentList { (objects, error) -> Void in
+        commentAPI.queryCommentList( { (objects, error) -> Void in
             if error == nil {
                 self.commentList += objects as [CommentModel]
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                 })
             }
-        }
+        }, post: self.postModel!)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

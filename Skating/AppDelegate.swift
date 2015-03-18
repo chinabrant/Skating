@@ -20,16 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "nav_bg"), forBarMetrics: UIBarMetrics.Default)
         
-//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        
-//        self.window!.backgroundColor = UIColor.whiteColor()
-//        var circleList = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CircleListViewController") as CircleListViewController
-//        var nav = UINavigationController(rootViewController: circleList)
-//        var menu = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
-//        var sideMenu = SideMenuViewController.sharedInstance
-//        sideMenu.setViewControllers(menu, center: nav)
-//        
-//        self.window?.rootViewController = sideMenu
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(),
+            NSFontAttributeName: UIFont.boldSystemFontOfSize(20)];
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         
         return true
     }
@@ -41,6 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CommentModel.registerSubclass()
         PostModel.registerSubclass()
         CircleModel.registerSubclass()
+        
+        AVUser.logInWithUsernameInBackground("111", password: "123456") { (user, error) -> Void in
+            if error != nil {
+                println(error)
+            } else {
+                println("登录成功")
+            }
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

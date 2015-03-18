@@ -13,11 +13,11 @@ class DataList {
     var isReachLastPage: Bool = false
     var currentPage: Int = 0
     var totalRecord: Int = 0
-    var list: NSMutableArray = NSMutableArray(capacity: 0)
+    var list = [AnyObject]()
     
-    func loadDataFromData(data: NSDictionary) {
+    func loadData(data: [AnyObject]) {
         if self.isReloading {
-            self.list.removeAllObjects()
+            list.removeAll(keepCapacity: false)
             self.currentPage = 1
             self.isReachLastPage = false
         }
@@ -28,8 +28,11 @@ class DataList {
             currentPage++;
         }
         
-        
-        
+        self.list += data
+
+        if data.count < 10 {
+            self.isReachLastPage = true
+        }
     }
     
     func count() -> Int {
@@ -37,11 +40,11 @@ class DataList {
     }
     
     func objectAtInde(index: Int) -> AnyObject {
-        return list.objectAtIndex(index)
+        return list[index]
     }
     
     func removeAllObjects() {
-        list.removeAllObjects()
+        list.removeAll(keepCapacity: false)
     }
     
     func isLastPage() ->Bool {

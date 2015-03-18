@@ -14,9 +14,11 @@ class PostAPI: BaseAPI {
         self.query = AVQuery(className: "Post")
     }
     
-    func queryPostList(callback: AVArrayResultBlock) {
+    func queryPostList(callback: AVArrayResultBlock, circle: CircleModel) {
         self.requestState = RequestState.Requesting
         self.query?.limit = self.pageSize
+        self.query?.includeKey("user")
+        self.query?.whereKey("circle", equalTo: circle)
         self.query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             self.requestState = RequestState.None
             callback(objects, error)

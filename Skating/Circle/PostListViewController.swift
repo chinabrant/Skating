@@ -8,12 +8,20 @@
 
 import UIKit
 
-class PostListViewController: BaseViewController {
+class PostListViewController: BaseTableViewController {
 
     @IBOutlet weak var theTableView: UITableView!
     var circle: CircleModel?
     var postAPI: PostAPI = PostAPI()
-    var postList = [PostModel]()
+//    var postList = [PostModel]()
+    var postList = PostList()
+    
+    
+    override func initTableView() {
+        self.containLoadMoreView = true
+        self.tbview = self.theTableView
+        self.dataList = postList
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +29,24 @@ class PostListViewController: BaseViewController {
 
         theTableView.registerNib(UINib(nibName: "PostListCell", bundle: nil), forCellReuseIdentifier: "PostListCell")
         
+        self.theTableView.addPullToRefresh { () -> () in
+            self.refreshData()
+        }
         
-        self.refreshData()
+        self.theTableView.startPullToRefresh()
     }
     
     func refreshData() {
-        self.postAPI.queryPostList { (objects, error) -> Void in
+        self.postList.isReloading = true
+        
+        self.postAPI.queryPostList( { (objects, error) -> Void in
             if error == nil {
-                self.postList += objects as [PostModel]
+                self.postList.loadData(objects)
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.theTableView.reloadData()
                 })
             }
-        }
+        }, circle: self.circle!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +57,7 @@ class PostListViewController: BaseViewController {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
-        return postList.count
+        return postList.count()
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -56,7 +69,7 @@ class PostListViewController: BaseViewController {
         
         let Identifier = "PostListCell"
         var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as PostListCell
-        cell.bindPost(self.postList[indexPath.row])
+        cell.bindPost(self.postList.list[indexPath.row] as PostModel)
         
         return cell
     }
@@ -64,7 +77,7 @@ class PostListViewController: BaseViewController {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         var postDetail = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PostDetailViewController") as PostDetailViewController
-        postDetail.postModel = self.postList[indexPath.row]
+        postDetail.postModel = self.postList.list[indexPath.row] as? PostModel
         self.navigationController?.pushViewController(postDetail, animated: true)
     }
 

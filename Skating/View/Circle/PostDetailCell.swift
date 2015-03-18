@@ -13,6 +13,9 @@ class PostDetailCell: UITableViewCell {
     @IBOutlet weak var titleLabel: AutoHeiLabel!
     @IBOutlet weak var contentLabel: AutoHeiLabel!
     @IBOutlet weak var imgView: AutoHeiImageView!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +33,17 @@ class PostDetailCell: UITableViewCell {
     func bindPost(post: PostModel) {
         self.titleLabel.text = post.title
         self.contentLabel.text = post.content
-        println(post.image)
+        self.timeLabel.text = post.getFormatterTime()
+        self.usernameLabel.text = post.user?.username
+        
+        post.user?.avatar?.getDataInBackgroundWithBlock({ (data, error) -> Void in
+            if data != nil {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.avatarImageView.image = UIImage(data: data!)
+                })
+            }
+        })
+        
         if (post.image?.isDataAvailable != nil) {
             self.imgView.image = UIImage(data: post.image!.getData())
         } else {

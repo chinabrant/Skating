@@ -11,3 +11,6 @@
 #import <AVOSCloudSNS.h>
 #import <RESideMenu.h> 
 
+#import <CommonCrypto/CommonCrypto.h>
+#import "Reachability.h"
+#import "GCPlaceholderTextView.h"

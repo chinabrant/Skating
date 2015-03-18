@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,14 +16,31 @@
                 <subviews>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="puy-Hq-plg">
                         <rect key="frame" x="13" y="31" width="297" height="38"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.67450980390000004" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-hO-Pqg">
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015-03-15 09:43" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0to-Y5-AO5">
+                                <rect key="frame" x="46" y="22" width="230" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qW-Wu-6T3">
+                                <rect key="frame" x="46" y="1" width="230" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.74117647060000003" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="38" id="Aib-2t-HYz"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0J-8x-JWU" customClass="AutoHeiLabel" customModule="Skating" customModuleProvider="target">
                         <rect key="frame" x="13" y="9" width="299" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,8 +58,8 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxx-VA-qee" customClass="AutoHeiLabel" customModule="Skating" customModuleProvider="target">
                         <rect key="frame" x="11" y="105" width="299" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.23137254901960785" green="0.27058823529411763" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="common_dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="hfY-s3-9bW">
@@ -55,7 +72,7 @@
                 <color key="backgroundColor" red="0.89411764705882357" green="0.89803921568627454" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="cxx-VA-qee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="1Pa-de-hEk"/>
-                    <constraint firstItem="jU9-y7-59z" firstAttribute="top" secondItem="puy-Hq-plg" secondAttribute="bottom" constant="8" id="42u-O1-ir1"/>
+                    <constraint firstItem="jU9-y7-59z" firstAttribute="top" secondItem="puy-Hq-plg" secondAttribute="bottom" constant="15" id="42u-O1-ir1"/>
                     <constraint firstAttribute="trailing" secondItem="t0J-8x-JWU" secondAttribute="trailing" constant="8" id="B42-6D-wEc"/>
                     <constraint firstAttribute="trailing" secondItem="puy-Hq-plg" secondAttribute="trailing" constant="10" id="C28-dA-IHD"/>
                     <constraint firstAttribute="trailing" secondItem="cxx-VA-qee" secondAttribute="trailing" constant="10" id="Deg-3S-3H4"/>
@@ -73,9 +90,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="avatarImageView" destination="fgP-hO-Pqg" id="gYq-f6-pKp"/>
                 <outlet property="contentLabel" destination="cxx-VA-qee" id="FTC-ri-qms"/>
                 <outlet property="imgView" destination="jU9-y7-59z" id="dQV-ju-NrQ"/>
+                <outlet property="timeLabel" destination="0to-Y5-AO5" id="vTN-0G-E4o"/>
                 <outlet property="titleLabel" destination="t0J-8x-JWU" id="weH-Ee-28g"/>
+                <outlet property="usernameLabel" destination="9qW-Wu-6T3" id="Ro6-Gq-wMC"/>
             </connections>
             <point key="canvasLocation" x="369" y="520"/>
         </tableViewCell>
