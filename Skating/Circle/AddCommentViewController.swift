@@ -16,6 +16,7 @@ class AddCommentViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "评论"
         textView.placeholder = "请输入评论内容"
         // Do any additional setup after loading the view.
         var leftItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Bordered, target: self, action: "cancel")

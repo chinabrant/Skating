@@ -20,7 +20,23 @@ class WodeViewController: UITableViewController {
         self.view.backgroundColor = Constant.MainBGColor
         
         self.usernameLabel.text = UserModel.currentUser().username
+        var item = UIBarButtonItem(title: "xx", style: UIBarButtonItemStyle.Bordered, target: self, action: "login")
+        self.navigationItem.rightBarButtonItem = item
         
+        var leftItem = UIBarButtonItem(title: "设置", style: UIBarButtonItemStyle.Bordered, target: self, action: "settings")
+        self.navigationItem.leftBarButtonItem = leftItem
+    }
+    
+    func settings() {
+        var settings = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SettingsViewController") as SettingsViewController
+        settings.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(settings, animated: true)
+    }
+    
+    func login() {
+        var login = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController
+        var nav = UINavigationController(rootViewController: login)
+        self.presentViewController(nav, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
