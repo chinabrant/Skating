@@ -28,8 +28,8 @@ class PostListCell: UITableViewCell {
     
     func bindPost(post: PostModel) {
         self.titleLabel.text = post.title
-        self.timeLabel.text = post.getFormatterTime()
-        self.userLabel.text = post.user?.username
+        self.timeLabel.text = post.user!.username + " " + post.getFormatterTime()
+        self.userLabel.text = "\(post.commentCount!)" + "回复"
     }
     
 }

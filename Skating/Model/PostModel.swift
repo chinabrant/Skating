@@ -11,6 +11,7 @@ import UIKit
 class PostModel: BaseModel, AVSubclassing {
     var title: String?
     var content: String?
+    var commentCount: NSNumber?
     var circle: CircleModel?
     var image: AVFile?
     var user: UserModel?

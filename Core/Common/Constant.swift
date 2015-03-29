@@ -10,5 +10,6 @@ import Foundation
 
 struct Constant {
     static let MainBGColor = UIColor.hexValue("#E4E5DD")
+    static let MainColor = UIColor.hexValue("#8dc028")
     static let PI = 3.14159265358979324
 }

@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(),
             NSFontAttributeName: UIFont.boldSystemFontOfSize(20)];
         
+        UITabBar.appearance().tintColor = Constant.MainColor
+        
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         
         return true

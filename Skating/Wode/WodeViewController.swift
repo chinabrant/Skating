@@ -10,14 +10,45 @@ import UIKit
 
 class WodeViewController: UITableViewController {
 
+    @IBOutlet weak var topImage: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    
+    var originY: CGFloat = 0
+    
+    // 顶部图片下拉放大效果
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        var offsety = scrollView.contentOffset.y
+        
+        if offsety < -150 {
+            scrollView.contentOffset = CGPointMake(0, -150)
+            return
+        }
+        
+        if offsety <= 0 {
+            if -originY > -offsety {
+                // 往上  返回的时候，图片大小缩回去
+                var offset = -originY + offsety
+                var scale = (-originY + offsety) / topImage.height
+                self.topImage.transform = CGAffineTransformScale(topImage.transform, 1 - scale, 1 - scale)
+                self.topImage.y = offsety
+            } else {
+                // 往下拉 下拉的时候，图片放大
+                var offset = -offsety + originY
+                var scale = (-offsety + originY) / topImage.height
+                self.topImage.transform = CGAffineTransformScale(topImage.transform, scale + 1, scale + 1)
+                self.topImage.y = offsety
+            }
+            
+            originY = offsety
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "我的"
         self.view.backgroundColor = Constant.MainBGColor
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         
         self.usernameLabel.text = UserModel.currentUser().username
         var item = UIBarButtonItem(title: "xx", style: UIBarButtonItemStyle.Bordered, target: self, action: "login")
@@ -42,6 +73,10 @@ class WodeViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
 
     // MARK: - Table view data source
