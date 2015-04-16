@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PostModel.registerSubclass()
         CircleModel.registerSubclass()
         
-        AVUser.logInWithUsernameInBackground("111", password: "123456") { (user, error) -> Void in
+        UserModel.logInWithUsernameInBackground("111", password: "123456") { (user, error) -> Void in
             if error != nil {
                 println(error)
             } else {

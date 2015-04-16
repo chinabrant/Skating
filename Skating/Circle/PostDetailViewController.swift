@@ -13,7 +13,7 @@ class PostDetailViewController: BaseViewController {
     
     var postModel: PostModel?
     var commentAPI: CommentAPI = CommentAPI()
-    var commentList = [CommentModel]()
+    var commentList = CommentList()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class PostDetailViewController: BaseViewController {
     
     // MARK: 点击回复按钮
     func reply() {
-        var addComment = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AddCommentViewController") as AddCommentViewController
+        var addComment = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AddCommentViewController") as! AddCommentViewController
         var nav = UINavigationController(rootViewController: addComment)
         addComment.post = self.postModel
         self.presentViewController(nav, animated: true) { () -> Void in
@@ -40,7 +40,7 @@ class PostDetailViewController: BaseViewController {
     func refreshData() {
         commentAPI.queryCommentList( { (objects, error) -> Void in
             if error == nil {
-                self.commentList += objects as [CommentModel]
+                self.commentList.list += objects as [AnyObject]
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                 })
@@ -53,27 +53,26 @@ class PostDetailViewController: BaseViewController {
             return 1
         }
         
-        return self.commentList.count
+        return self.commentList.count()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 2
     }
-
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let Identifier = "PostDetailCell"
-            var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as PostDetailCell
+            var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as! PostDetailCell
             cell.bindPost(self.postModel!)
             
             return cell
         }
         
         let Identifier = "CommentCell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as CommentCell
-        cell.bindComment(self.commentList[indexPath.row])
+        var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as! CommentCell
+        cell.bindComment(self.commentList.list[indexPath.row] as! CommentModel)
         
         return cell
     }

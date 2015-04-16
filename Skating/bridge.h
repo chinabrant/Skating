@@ -9,8 +9,9 @@
 #import <AVOSCloud.h>
 #import <AVOSCloud/AVObject+Subclass.h>
 #import <AVOSCloudSNS.h>
-#import <RESideMenu.h> 
 
 #import <CommonCrypto/CommonCrypto.h>
 #import "Reachability.h"
 #import "GCPlaceholderTextView.h"
+
+#import "MJRefresh.h"

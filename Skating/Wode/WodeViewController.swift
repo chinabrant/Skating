@@ -50,22 +50,46 @@ class WodeViewController: UITableViewController {
         self.view.backgroundColor = Constant.MainBGColor
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         
-        self.usernameLabel.text = UserModel.currentUser().username
-        var item = UIBarButtonItem(title: "xx", style: UIBarButtonItemStyle.Bordered, target: self, action: "login")
+        self.avatarImageView.layer.cornerRadius = self.avatarImageView.width / 2.0
+        self.avatarImageView.layer.borderWidth = 2
+        self.avatarImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        self.avatarImageView.layer.masksToBounds = true
+        
+        var tap = UITapGestureRecognizer(target: self, action: "changeAvatar")
+        self.avatarImageView.userInteractionEnabled = true
+        self.avatarImageView.addGestureRecognizer(tap)
+        
+        if UserModel.currentUser() != nil {
+            self.usernameLabel.text = UserModel.currentUser().username
+            UserModel.currentUser().avatar?.getDataInBackgroundWithBlock({ (data, error) -> Void in
+                if data != nil {
+                    self.avatarImageView.image = UIImage(data: data)
+                }
+            })
+        }
+        
+        var item = UIBarButtonItem(title: "登录", style: UIBarButtonItemStyle.Bordered, target: self, action: "login")
         self.navigationItem.rightBarButtonItem = item
         
         var leftItem = UIBarButtonItem(title: "设置", style: UIBarButtonItemStyle.Bordered, target: self, action: "settings")
         self.navigationItem.leftBarButtonItem = leftItem
     }
     
+    func changeAvatar() {
+        if UserModel.currentUser() == nil {
+            (self.tabBarController as! TabBarViewController).showLoginView()
+            return
+        }
+    }
+    
     func settings() {
-        var settings = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SettingsViewController") as SettingsViewController
+        var settings = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SettingsViewController") as! SettingsViewController
         settings.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(settings, animated: true)
     }
     
     func login() {
-        var login = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController
+        var login = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         var nav = UINavigationController(rootViewController: login)
         self.presentViewController(nav, animated: true, completion: nil)
     }
@@ -91,6 +115,10 @@ class WodeViewController: UITableViewController {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 1
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }

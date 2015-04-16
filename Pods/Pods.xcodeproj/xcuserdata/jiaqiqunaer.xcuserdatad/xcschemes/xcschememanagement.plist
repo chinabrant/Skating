@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AVOSCloud.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-AVOSCloudSNS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-RESideMenu.xcscheme</key>
+		<key>Pods-MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00ED54BC759DC1C2183E85B9</key>
+		<key>4ABE2F2BA9069A0966E02E34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>240BFA325F5916FF0540C588</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>32F64553A1F8192C791E44BC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C81127618C45ED9F2188D418</key>
+		<key>72A18C02C76E379BCDDAD310</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -23,9 +23,9 @@ class BaseTableViewController: BaseViewController {
         initTableView()
         super.viewDidLoad()
 
-        if self.containLoadMoreView {
-            self.addLoadMoreView()
-        }
+//        if self.containLoadMoreView {
+//            self.addLoadMoreView()
+//        }
     }
     
     func showNodataView(msg: String) {

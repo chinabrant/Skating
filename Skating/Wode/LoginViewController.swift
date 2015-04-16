@@ -43,7 +43,7 @@ class LoginViewController: UITableViewController {
             return
         }
         
-        AVUser.logInWithUsernameInBackground(self.usernameField.text, password: self.passwordField.text) { (user, error) -> Void in
+        UserModel.logInWithUsernameInBackground(self.usernameField.text, password: self.passwordField.text) { (user, error) -> Void in
             if user != nil {
                 TMAlertView.sharedInstance.showSuccessMsgAutoHide(1, message: "登录成功")
             }

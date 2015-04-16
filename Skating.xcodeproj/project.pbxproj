@@ -45,6 +45,9 @@
 		095E4B3B1AB80C7B00BF64BE /* PostDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095E4B391AB80C7B00BF64BE /* PostDetailCell.xib */; };
 		095E4B3F1AB80DFB00BF64BE /* AutoHeiImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E4B3D1AB80DFB00BF64BE /* AutoHeiImageView.swift */; };
 		095E4B401AB80DFB00BF64BE /* AutoHeiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E4B3E1AB80DFB00BF64BE /* AutoHeiLabel.swift */; };
+		09C549F61ADE521A00C1D29A /* CommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C549F51ADE521A00C1D29A /* CommentList.swift */; };
+		09C88C2A1AC8ED1B00C42D4A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C88C291AC8ED1B00C42D4A /* TabBarViewController.swift */; };
+		09D75B5B1ADF504F0094D55A /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D75B5A1ADF504F0094D55A /* AddPostViewController.swift */; };
 		09E7B8FE1AA98892006E7442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7B8FD1AA98892006E7442 /* AppDelegate.swift */; };
 		09E7B9031AA98892006E7442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E7B9011AA98892006E7442 /* Main.storyboard */; };
 		09E7B9051AA98892006E7442 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E7B9041AA98892006E7442 /* Images.xcassets */; };
@@ -59,12 +62,7 @@
 		09FC1A121AB914610076B727 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A111AB914610076B727 /* Constant.swift */; };
 		09FC1A141AB914980076B727 /* CommonExtensionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A131AB914980076B727 /* CommonExtensionCollection.swift */; };
 		09FC1A191AB916580076B727 /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A181AB916580076B727 /* LoadMoreView.swift */; };
-		09FC1A1B1AB916610076B727 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A1A1AB916610076B727 /* SwiftyJSON.swift */; };
 		09FC1A1F1AB9166E0076B727 /* TMImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A1E1AB9166E0076B727 /* TMImageLoader.swift */; };
-		09FC1A251AB9167B0076B727 /* pulltorefresharrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FC1A211AB9167B0076B727 /* pulltorefresharrow.png */; };
-		09FC1A261AB9167B0076B727 /* PullToRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A221AB9167B0076B727 /* PullToRefreshConst.swift */; };
-		09FC1A271AB9167B0076B727 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A231AB9167B0076B727 /* PullToRefreshView.swift */; };
-		09FC1A281AB9167B0076B727 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A241AB9167B0076B727 /* UIScrollViewExtension.swift */; };
 		09FC1A2C1AB916880076B727 /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A2B1AB916880076B727 /* GCPlaceholderTextView.m */; };
 		09FC1A301AB9168D0076B727 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A2E1AB9168D0076B727 /* Cache.swift */; };
 		09FC1A311AB9168D0076B727 /* CacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC1A2F1AB9168D0076B727 /* CacheObject.swift */; };
@@ -130,6 +128,9 @@
 		095E4B391AB80C7B00BF64BE /* PostDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailCell.xib; sourceTree = "<group>"; };
 		095E4B3D1AB80DFB00BF64BE /* AutoHeiImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHeiImageView.swift; sourceTree = "<group>"; };
 		095E4B3E1AB80DFB00BF64BE /* AutoHeiLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHeiLabel.swift; sourceTree = "<group>"; };
+		09C549F51ADE521A00C1D29A /* CommentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentList.swift; sourceTree = "<group>"; };
+		09C88C291AC8ED1B00C42D4A /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		09D75B5A1ADF504F0094D55A /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		09E7B8F81AA98892006E7442 /* Skating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7B8FC1AA98892006E7442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E7B8FD1AA98892006E7442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,12 +150,7 @@
 		09FC1A111AB914610076B727 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		09FC1A131AB914980076B727 /* CommonExtensionCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtensionCollection.swift; sourceTree = "<group>"; };
 		09FC1A181AB916580076B727 /* LoadMoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
-		09FC1A1A1AB916610076B727 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		09FC1A1E1AB9166E0076B727 /* TMImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMImageLoader.swift; sourceTree = "<group>"; };
-		09FC1A211AB9167B0076B727 /* pulltorefresharrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulltorefresharrow.png; sourceTree = "<group>"; };
-		09FC1A221AB9167B0076B727 /* PullToRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshConst.swift; sourceTree = "<group>"; };
-		09FC1A231AB9167B0076B727 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
-		09FC1A241AB9167B0076B727 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		09FC1A2A1AB916880076B727 /* GCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPlaceholderTextView.h; sourceTree = "<group>"; };
 		09FC1A2B1AB916880076B727 /* GCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPlaceholderTextView.m; sourceTree = "<group>"; };
 		09FC1A2E1AB9168D0076B727 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -235,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				091CE90A1AB91FF7002C99DE /* PostList.swift */,
+				09C549F51ADE521A00C1D29A /* CommentList.swift */,
 			);
 			path = DataList;
 			sourceTree = "<group>";
@@ -268,9 +265,7 @@
 				09FC1A331AB916960076B727 /* Reachability.m */,
 				09FC1A2D1AB9168D0076B727 /* AwesomeCache */,
 				09FC1A291AB916880076B727 /* GCPlaceHolderTextView */,
-				09FC1A201AB9167B0076B727 /* PullToRefresh */,
 				09FC1A1E1AB9166E0076B727 /* TMImageLoader.swift */,
-				09FC1A1A1AB916610076B727 /* SwiftyJSON.swift */,
 				09FC1A181AB916580076B727 /* LoadMoreView.swift */,
 				09FC1A131AB914980076B727 /* CommonExtensionCollection.swift */,
 				095E4B3C1AB80DA600BF64BE /* Mine */,
@@ -382,6 +377,7 @@
 				09E7B9261AA995C8006E7442 /* PostListViewController.swift */,
 				090021581AB7EDD5000CFA53 /* PostDetailViewController.swift */,
 				091CE90F1AB94FD0002C99DE /* AddCommentViewController.swift */,
+				09D75B5A1ADF504F0094D55A /* AddPostViewController.swift */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -430,17 +426,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		09FC1A201AB9167B0076B727 /* PullToRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				09FC1A211AB9167B0076B727 /* pulltorefresharrow.png */,
-				09FC1A221AB9167B0076B727 /* PullToRefreshConst.swift */,
-				09FC1A231AB9167B0076B727 /* PullToRefreshView.swift */,
-				09FC1A241AB9167B0076B727 /* UIScrollViewExtension.swift */,
-			);
-			path = PullToRefresh;
-			sourceTree = "<group>";
-		};
 		09FC1A291AB916880076B727 /* GCPlaceHolderTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				09FC1A391AB917350076B727 /* SKBaseViewController.swift */,
+				09C88C291AC8ED1B00C42D4A /* TabBarViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -586,7 +572,6 @@
 				091CE9221AB95FCE002C99DE /* loading_6.png in Resources */,
 				091CE91E1AB95FAB002C99DE /* loading_4.png in Resources */,
 				095716231AB6D7880061F2C8 /* CircleListCell.xib in Resources */,
-				09FC1A251AB9167B0076B727 /* pulltorefresharrow.png in Resources */,
 				090021DA1AB805D8000CFA53 /* CommentCell.xib in Resources */,
 				095E4B3B1AB80C7B00BF64BE /* PostDetailCell.xib in Resources */,
 				091CE9201AB95FC0002C99DE /* loading_5.png in Resources */,
@@ -660,35 +645,34 @@
 				091CE90E1AB92C04002C99DE /* WodeViewController.swift in Sources */,
 				095E4B3F1AB80DFB00BF64BE /* AutoHeiImageView.swift in Sources */,
 				091CE9121AB95D64002C99DE /* TMAlertView.swift in Sources */,
-				09FC1A1B1AB916610076B727 /* SwiftyJSON.swift in Sources */,
 				09FC1A121AB914610076B727 /* Constant.swift in Sources */,
 				09E7B9271AA995C8006E7442 /* PostListViewController.swift in Sources */,
 				0957161A1AB6CAB00061F2C8 /* CircleModel.swift in Sources */,
+				09D75B5B1ADF504F0094D55A /* AddPostViewController.swift in Sources */,
 				095716221AB6D7880061F2C8 /* CircleListCell.swift in Sources */,
 				09E7B9201AA99143006E7442 /* MenuViewController.swift in Sources */,
 				0957161D1AB6CC360061F2C8 /* DataList.swift in Sources */,
 				09FC1A301AB9168D0076B727 /* Cache.swift in Sources */,
 				09E7B9301AA9A542006E7442 /* PostModel.swift in Sources */,
 				090021521AB7CD8E000CFA53 /* NetConstant.swift in Sources */,
-				09FC1A261AB9167B0076B727 /* PullToRefreshConst.swift in Sources */,
 				09FC1A311AB9168D0076B727 /* CacheObject.swift in Sources */,
 				09E7B92C1AA997E3006E7442 /* PostListCell.swift in Sources */,
 				09E7B8FE1AA98892006E7442 /* AppDelegate.swift in Sources */,
+				09C549F61ADE521A00C1D29A /* CommentList.swift in Sources */,
 				610C9ADD1AB9B39100CBE20B /* SettingsViewController.swift in Sources */,
 				09FC1A141AB914980076B727 /* CommonExtensionCollection.swift in Sources */,
 				095E4B3A1AB80C7B00BF64BE /* PostDetailCell.swift in Sources */,
-				09FC1A281AB9167B0076B727 /* UIScrollViewExtension.swift in Sources */,
 				09FC1A3A1AB917350076B727 /* SKBaseViewController.swift in Sources */,
 				0900214C1AB7CD5B000CFA53 /* HTTPRequestSerializer.swift in Sources */,
 				090021571AB7ECEE000CFA53 /* CircleAPI.swift in Sources */,
 				09FC1A2C1AB916880076B727 /* GCPlaceholderTextView.m in Sources */,
+				09C88C2A1AC8ED1B00C42D4A /* TabBarViewController.swift in Sources */,
 				09543B6B1AB91AE300AAE37B /* PublicFunc.swift in Sources */,
 				091CE9101AB94FD0002C99DE /* AddCommentViewController.swift in Sources */,
 				611FFC401AB85397008F8B5B /* UserModel.swift in Sources */,
 				0900214E1AB7CD5B000CFA53 /* HTTPTask.swift in Sources */,
 				0900214F1AB7CD5B000CFA53 /* HTTPUpload.swift in Sources */,
 				09E7B9241AA991B2006E7442 /* CircleListViewController.swift in Sources */,
-				09FC1A271AB9167B0076B727 /* PullToRefreshView.swift in Sources */,
 				090021451AB7CD04000CFA53 /* BaseAPI.swift in Sources */,
 				0900214D1AB7CD5B000CFA53 /* HTTPResponseSerializer.swift in Sources */,
 				09FC1A341AB916960076B727 /* Reachability.m in Sources */,

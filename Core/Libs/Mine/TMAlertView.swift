@@ -65,7 +65,7 @@ class TMAlertView: UIViewController {
         label.y = loadingImageView.y + loadingImageView.height + 28
         self.view.addSubview(label)
         
-        var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+        var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
         pv.addSubview(self.view)
     }
     
@@ -95,7 +95,7 @@ class TMAlertView: UIViewController {
         self.view.addSubview(contentView)
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
             pv.addSubview(self.view)
         })
         
@@ -118,7 +118,7 @@ class TMAlertView: UIViewController {
         self.view.addSubview(contentView)
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
             pv.addSubview(self.view)
         })
         dismiss(3)
@@ -142,7 +142,7 @@ class TMAlertView: UIViewController {
         
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
             pv.addSubview(self.view)
         })
         dismiss(delay)
@@ -201,7 +201,7 @@ class TMAlertView: UIViewController {
         
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
             pv.addSubview(self.view)
         })
     }
@@ -240,7 +240,7 @@ class TMAlertView: UIViewController {
         
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+            var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
             pv.addSubview(self.view)
         })
         dismiss(delay)
@@ -295,7 +295,7 @@ class TMAlertView: UIViewController {
         self.view.addSubview(contentView)
         
 
-        var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as UIView
+        var pv: UIView = UIApplication.sharedApplication().keyWindow?.subviews.first as! UIView
         pv.addSubview(self.view)
     }
     
@@ -371,7 +371,7 @@ class TMAlertView: UIViewController {
     func removeAllViews() {
         var views: Array = self.view.subviews
         for view: AnyObject in views {
-            (view as UIView).removeFromSuperview()
+            (view as! UIView).removeFromSuperview()
         }
     }
     

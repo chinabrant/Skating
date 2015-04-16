@@ -144,7 +144,7 @@ extension UIColor {
         let scannerResult: Bool = scanner.scanHexLongLong(&hexComponent)
         
         func verifyHexValue() -> Bool {
-            var length = countElements(hexColor)
+            var length = count(hexColor)
             if (length == 3 || length == 6) && scannerResult {
                 return true
             } else {
@@ -155,7 +155,7 @@ extension UIColor {
         let checkResult = verifyHexValue()
         assert(checkResult, "Invalid Hex Color Value")
         
-        switch countElements(hexColor) {
+        switch count(hexColor) {
         case 3:
             red = CGFloat((hexComponent & 0xF00) >> 8 * 17) / 255.0
             green = CGFloat((hexComponent & 0x0F0) >> 4 * 17) / 255.0
@@ -196,6 +196,6 @@ extension String  {
         
         result.dealloc(digestLen)
         
-        return String(format: hash)
+        return String(format: hash as String)
     }
 }

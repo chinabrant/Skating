@@ -2,16 +2,16 @@ PODS:
   - AVOSCloud (2.6.11)
   - AVOSCloudSNS (2.6.11):
     - AVOSCloud
-  - RESideMenu (4.0.7)
+  - MJRefresh (1.4.1)
 
 DEPENDENCIES:
   - AVOSCloud
   - AVOSCloudSNS
-  - RESideMenu (~> 4.0.7)
+  - MJRefresh
 
 SPEC CHECKSUMS:
-  AVOSCloud: e2fc2896944edf90f83fb161c3d73e5f55edcbef
-  AVOSCloudSNS: 481a4611c3c5896b544f901ddf4e2edcb688eef5
-  RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
+  AVOSCloud: a9696c027bc2ddee625d65f141c2a7eaa9f781a5
+  AVOSCloudSNS: 69ab272a3d293ad23c319a2a88d514564d26dd47
+  MJRefresh: 6a0fd4c81a957803bd99bbbf55a956d1d6f41263
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.36.3

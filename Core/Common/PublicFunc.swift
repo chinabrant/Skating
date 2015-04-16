@@ -42,10 +42,10 @@ class PublicFunc {
         var regextestcm = NSPredicate(format: "SELF MATCHES %@",CM )
         var regextestcu = NSPredicate(format: "SELF MATCHES %@" ,CU)
         var regextestct = NSPredicate(format: "SELF MATCHES %@" ,CT)
-        if ((regextestmobile!.evaluateWithObject(num) == true)
-            || (regextestcm!.evaluateWithObject(num)  == true)
-            || (regextestct!.evaluateWithObject(num) == true)
-            || (regextestcu!.evaluateWithObject(num) == true)) {
+        if ((regextestmobile.evaluateWithObject(num) == true)
+            || (regextestcm.evaluateWithObject(num)  == true)
+            || (regextestct.evaluateWithObject(num) == true)
+            || (regextestcu.evaluateWithObject(num) == true)) {
             return true
         } else {
             return false

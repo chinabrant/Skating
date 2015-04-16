@@ -18,12 +18,12 @@ class DataList {
     func loadData(data: [AnyObject]) {
         if self.isReloading {
             list.removeAll(keepCapacity: false)
-            self.currentPage = 1
+            self.currentPage = 0
             self.isReachLastPage = false
         }
         
         if self.list.count == 0 {
-            self.currentPage = 1
+            self.currentPage = 0
         } else {
             currentPage++;
         }

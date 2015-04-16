@@ -32,7 +32,7 @@ class CircleListViewController: BaseViewController {
         self.circleAPI.queryCircleList { (objects, error) -> Void in
             if error == nil {
                 println(objects)
-                self.circleList += objects as [CircleModel]
+                self.circleList += objects as! [CircleModel]
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                 })
@@ -46,7 +46,7 @@ class CircleListViewController: BaseViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let Identifier = "CircleListCell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as CircleListCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(Identifier) as! CircleListCell
         var circle = self.circleList[indexPath.row] as CircleModel
         cell.bindCircle(circle)
         return cell
@@ -59,7 +59,7 @@ class CircleListViewController: BaseViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        var postList = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PostListViewController") as PostListViewController
+        var postList = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PostListViewController") as! PostListViewController
         postList.circle = self.circleList[indexPath.row] as CircleModel
         postList.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(postList, animated: true)

@@ -32,7 +32,7 @@ class SideMenuViewController: BaseViewController {
         return Static.instance
     }
     
-    override init() {
+    init() {
         super.init(nibName: nil, bundle: nil)
         self.isLeftMenuOpen = false
         self.animateComplete = true
@@ -41,6 +41,10 @@ class SideMenuViewController: BaseViewController {
         maskView.userInteractionEnabled = true
         maskView.addGestureRecognizer(tap)
         maskView.backgroundColor = UIColor.clearColor()
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
